@@ -1,0 +1,24 @@
+//Theme Colours
+$primary: rgb(255, 153, 0);
+$secondary: rgb(0, 225, 255);
+$dark: rgb(31, 31, 31);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Pacifico&display=swap');
+
+* {
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+	font-family: 'Pacifico', cursive;
+}
+
+.text-white {
+	color: #fff;
+}

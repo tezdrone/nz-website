@@ -1,0 +1,50 @@
+@import './mixins/_breakpoints.scss';
+
+* {
+	box-sizing: border-box;
+}
+
+.row::after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+// Mobile
+[class*='col-'] {
+	width: 100%;
+	float: left;
+	padding: 15px;
+}
+
+@mixin col-queries($breakpoint) {
+	@for $i from 1 to 13 {
+		@if $breakpoint {
+			.col-#{$breakpoint}-#{$i} {
+				width: ($i / 12) * 100%;
+			}
+		} @else {
+			.col-#{$i} {
+				width: ($i / 12) * 100%;
+			}
+		}
+	}
+}
+
+@include col-queries(false);
+
+@include sm {
+	@include col-queries('sm');
+}
+
+@include md {
+	@include col-queries('md');
+}
+
+@include lg {
+	@include col-queries('lg');
+}
+
+@include xl {
+	@include col-queries('xl');
+}
