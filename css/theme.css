@@ -1,17 +1,21 @@
 /*Determine Best contrast text*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Pacifico&display=swap");
-* {
-  font-family: 'Montserrat Alternates', sans-serif;
-}
-
+*,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-.title {
+h6 {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.fancy-title {
   font-family: 'Pacifico', cursive;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-white {
@@ -176,8 +180,13 @@ nav.navbar .navbar-nav a:hover::after {
   color: white;
 }
 
+.mt-0,
 .my-0 {
   margin-top: 0;
+}
+
+.mb-0,
+my-0 {
   margin-bottom: 0;
 }
 
