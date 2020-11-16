@@ -39,11 +39,20 @@ nav.navbar {
   padding: 0.5rem 1rem;
   z-index: 1;
   color: #fff;
+  background: linear-gradient(225deg, #00000024, transparent);
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
 }
 
 nav.navbar.is-scrolled {
-  background-color: #fff;
+  background: #fff;
   color: #000;
+  -webkit-box-shadow: 0 0 5px 0px #00000080;
+          box-shadow: 0 0 5px 0px #00000080;
+}
+
+nav.navbar.is-scrolled .navbar-nav li a:hover::after {
+  background: #000000;
 }
 
 nav.navbar .navbar-brand {
@@ -51,7 +60,7 @@ nav.navbar .navbar-brand {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -75,13 +84,11 @@ nav.navbar .navbar-nav li:not(:last-of-type) a {
 }
 
 nav.navbar .navbar-nav a {
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 0.8rem;
   display: block;
   text-decoration: none;
   font-weight: bold;
   position: relative;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
 }
 
 nav.navbar .navbar-nav a:after {
@@ -101,7 +108,7 @@ nav.navbar .navbar-nav a:after {
 }
 
 nav.navbar .navbar-nav a:hover::after {
-  background: #000000;
+  background: #ffffff;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
