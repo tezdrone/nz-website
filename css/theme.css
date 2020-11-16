@@ -212,6 +212,23 @@ nav.navbar .navbar-nav a:hover::after {
   outline-color: rgba(255, 114, 20, 0.5);
 }
 
+.textarea-counter {
+  position: absolute;
+  bottom: 4px;
+  right: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.textarea-counter.too-big {
+  color: red;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -277,5 +294,9 @@ nav.navbar .navbar-nav a:hover::after {
 
 .d-inline-block {
   display: inline-block;
+}
+
+.p-relative {
+  position: relative;
 }
 /*# sourceMappingURL=theme.css.map */

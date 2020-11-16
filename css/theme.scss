@@ -197,6 +197,19 @@ nav.navbar {
 		outline-color: rgba($primary, 0.5);
 	}
 }
+.textarea-counter {
+	position: absolute;
+	bottom: 4px;
+	right: 10px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.5);
+	user-select: none;
+
+	&.too-big {
+		color: rgba(255, 0, 0, 1);
+	}
+}
 
 //Width
 .w-100 {
@@ -268,4 +281,9 @@ nav.navbar {
 //Display
 .d-inline-block {
 	display: inline-block;
+}
+
+//Position
+.p-relative {
+	position: relative;
 }

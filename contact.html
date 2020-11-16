@@ -27,7 +27,7 @@
 			<h1 class="fancy-title">Contact Us</h1>
 			<p>Got some questions? No worries, we've got your back. Just fill out this handy-dandy contact form and our team will get back to you within 24 hours.</p>
 
-			<form action="POST" class="w-100 w-md-50 d-inline-block" id="contactForm">
+			<form class="w-100 w-md-50 d-inline-block" id="contactForm">
 				<div class="row mb-2">
 					<input type="text" class="form-control" name="fName" id="fName" placeholder="First Name*" required min="3" />
 				</div>
@@ -48,8 +48,9 @@
 						<option value="other">Other</option>
 					</select>
 				</div>
-				<div class="row mb-3">
-					<textarea class="form-control inquiry-textarea" name="msg" id="msg" placeholder="Your inquiry..."></textarea>
+				<div class="row mb-3 p-relative">
+					<textarea class="form-control inquiry-textarea" name="msg" id="msg" placeholder="Your inquiry..." data-max-length="200" required></textarea>
+					<div class="textarea-counter" id="msgCounter"></div>
 				</div>
 				<div class="row mb-3">
 					<p class="mt-2 mb-0">How would you prefer we contact you?</p>
@@ -59,39 +60,11 @@
 					<label for="contactByPhone">by Phone</label>
 				</div>
 
-				<button class="btn btn-primary" type="submit">Submit</button>
+				<button class="btn btn-primary" type="submit" id="formSubmit">Submit</button>
 			</form>
 		</div>
 
-		<script>
-			// var name = prompt('what is your name?');
-			// console.log(name.toUpperCase());
-			// console.log(name.toLowerCase());
-			// console.log(`The length is ${name.length}`);
-
-			let random = Math.round(Math.random() * 3);
-
-			switch (random) {
-				case 0:
-					console.log('The number was 0. Yay');
-					break;
-
-				case 1:
-					console.log('Lucky number 1');
-					break;
-
-				case 2:
-					console.log('Even number 2');
-					break;
-
-				case 3:
-					console.log('you got a 3');
-					break;
-
-				default:
-					break;
-			}
-		</script>
+		<script src="js/contact-form.js"></script>
 
 		<script src="js/navbar.js"></script>
 	</body>
