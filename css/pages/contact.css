@@ -1,0 +1,8 @@
+.inquiry-textarea {
+	min-height: 200px;
+	height: 200px;
+	max-height: 400px;
+	min-width: 100%;
+	max-width: 100%;
+	resize: vertical;
+}
