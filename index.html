@@ -17,30 +17,31 @@
 				<ul class="navbar-nav">
 					<li><a href="/">Home</a></li>
 					<li><a href="places-to-go.html">Places to Go</a></li>
-					<li><a href="things-to-see.html">Things to See</a></li>
+					<li><a href="events-to-see.html">Events to See</a></li>
 					<li><a href="contact.html">Contact Us</a></li>
 				</ul>
 			</div>
 		</nav>
-		<div class="welcome">
+
+		<div class="welcome" id="welcome">
 			<img src="img/sunset.jpg" class="background" />
 			<div class="overlay d-flex">
 				<div class="row">
 					<div class="col-md-7 col-lg-6 welcome-text">
 						<h1 class="fancy-title my-0">Explore New Zealand</h1>
 						<h3 class="my-0 mb-3">like never before</h3>
-						<button class="btn btn-primary">Learn More!</button>
+						<a href="#aotearoa"><button class="btn btn-primary">Learn More!</button></a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="py-4">
+		<div class="py-4" id="aotearoa">
 			<div class="container text-center">
 				<h2 class="mb-0" style="font-weight: bold"><span class="fancy-title">Welcome</span> to <span class="fancy-itle">Aotearoa!</span></h2>
-				<p class="my-0">Ahhhh yes, the land of the long white cloud. It's time to unpack your bags, kick off ya' <a href="#">jandals</a>, and soak in the hot sun. The <span class="fancy-title">Kiwi Prelude</span> curates some of the best experiences around New Zealand for your viewing pleasure. Awesome eh?</p>
+				<p class="my-0">Ahhhh yes, the land of the long white cloud. It's time to unpack your bags, kick off ya' <u>jandals</u>, and soak in the hot sun. The <span class="fancy-title">Kiwi Prelude</span> curates some of the best experiences around New Zealand for your viewing pleasure. Awesome eh?</p>
 				<div class="row">
 					<div class="col-sm-6">
-						<a href="#" class="clicky-card"
+						<a href="places-to-go.html" class="clicky-card"
 							><div class="card">
 								<div class="card-text">
 									<div class="card-title">Places to Go</div>
@@ -50,10 +51,10 @@
 						>
 					</div>
 					<div class="col-sm-6">
-						<a href="#" class="clicky-card">
+						<a href="events-to-see.html" class="clicky-card">
 							<div class="card">
 								<div class="card-text">
-									<div class="card-title">Things to See</div>
+									<div class="card-title">Events to See</div>
 									<div class="card-subtitle">Upcoming Events that you simply must see</div>
 								</div>
 							</div>
@@ -95,6 +96,24 @@
 				</div>
 			</div>
 		</footer>
+
+		<script>
+			document.querySelectorAll('a[href^="#aotearoa"]').forEach((anchor) => {
+				console.log(anchor);
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					var welcomeY = document.getElementById('welcome').offsetHeight;
+					var navY = document.getElementById('mainNav').offsetHeight;
+
+					window.scroll({
+						top: welcomeY - navY + 2,
+						left: 0,
+						behavior: 'smooth',
+					});
+				});
+			});
+		</script>
 
 		<script src="js/navbar.js"></script>
 	</body>
