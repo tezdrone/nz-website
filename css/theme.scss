@@ -39,6 +39,10 @@ h6 {
 	text-align: left;
 }
 
+.text-right {
+	text-align: right;
+}
+
 .text-white {
 	color: #fff;
 }
@@ -128,6 +132,16 @@ nav.navbar {
 
 footer {
 	background-color: #e6e6e6;
+
+	ul {
+		list-style: none;
+
+		li {
+			&:not(:last-of-type) {
+				margin-bottom: 0.2rem;
+			}
+		}
+	}
 }
 
 @include md {

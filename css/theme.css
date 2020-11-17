@@ -22,6 +22,10 @@ h6 {
   text-align: left;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-white {
   color: #fff;
 }
@@ -130,6 +134,14 @@ nav.navbar .navbar-nav a:hover::after {
 
 footer {
   background-color: #e6e6e6;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li:not(:last-of-type) {
+  margin-bottom: 0.2rem;
 }
 
 @media (min-width: 768px) {
