@@ -302,6 +302,10 @@ a.clicky-card {
 	&:focus {
 		outline-color: rgba($primary, 0.5);
 	}
+
+	&.invalid {
+		border: 1px solid red;
+	}
 }
 .textarea-counter {
 	position: absolute;

@@ -6,3 +6,16 @@
 	max-width: 100%;
 	resize: vertical;
 }
+
+#errors.show {
+	background: red;
+	padding: 0.75rem 1.25rem;
+	margin-bottom: 1rem;
+	border-radius: 1rem;
+	color: #fff;
+}
+#errors ul {
+	margin-top: 0;
+	padding-left: 20px;
+	margin-bottom: 0;
+}

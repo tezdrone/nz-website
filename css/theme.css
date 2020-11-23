@@ -339,6 +339,10 @@ a.clicky-card .card .card-text .card-title {
   outline-color: rgba(255, 114, 20, 0.5);
 }
 
+.form-control.invalid {
+  border: 1px solid red;
+}
+
 .textarea-counter {
   position: absolute;
   bottom: 4px;

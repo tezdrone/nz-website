@@ -28,21 +28,22 @@
 			<h1 class="fancy-title">Contact Us</h1>
 			<p>Got some questions? No worries, we've got your back. Just fill out this handy-dandy contact form and our team will get back to you within 24 hours.</p>
 
+			<div id="errors" class="w-100 w-md-50 d-inline-block text-left"></div>
 			<form class="w-100 w-md-50 d-inline-block" id="contactForm">
 				<div class="row mb-2">
-					<input type="text" class="form-control" name="fName" id="fName" placeholder="First Name*" required minlength="3" />
+					<input type="text" class="form-control" name="fName" id="fName" placeholder="First Name(s)*" />
 				</div>
 				<div class="row mb-2">
-					<input type="text" class="form-control" name="lName" id="lName" placeholder="Last Name*" required minlength="3" />
+					<input type="text" class="form-control" name="lName" id="lName" placeholder="Last Name*" />
 				</div>
 				<div class="row mb-2">
-					<input type="email" class="form-control" name="email" id="email" placeholder="Email*" required />
+					<input type="email" class="form-control" name="email" id="email" placeholder="Email*" />
 				</div>
 				<div class="row mb-2">
 					<input type="tel" class="form-control" name="phone" id="" placeholder="Contact Phone" />
 				</div>
 				<div class="row mb-2">
-					<select class="form-control" name="subject" id="subject" required>
+					<select class="form-control" name="subject" id="subject">
 						<option value="" selected disabled>Pick a subject*</option>
 						<option value="events">Events</option>
 						<option value="locations">Locations</option>
@@ -50,7 +51,7 @@
 					</select>
 				</div>
 				<div class="row mb-3 p-relative">
-					<textarea class="form-control inquiry-textarea" name="msg" id="msg" placeholder="Your inquiry..." minlength="10" data-max-length="200" required></textarea>
+					<textarea class="form-control inquiry-textarea" name="msg" id="msg" placeholder="Your inquiry..." data-max-length="200"></textarea>
 					<div class="textarea-counter" id="msgCounter"></div>
 				</div>
 				<div class="row mb-3">
