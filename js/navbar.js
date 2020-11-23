@@ -1,5 +1,7 @@
+//Get the navbar
 const navbar = document.getElementById('mainNav');
 
+//Update navbar based on scroll position
 function updateNav() {
 	if (window.scrollY > 5) {
 		navbar.classList.add('is-scrolled');
@@ -8,8 +10,10 @@ function updateNav() {
 	}
 }
 
+//Run nav update onload once
 updateNav();
 
+//Run nav update after each scroll
 window.addEventListener('scroll', () => {
 	updateNav();
 });
