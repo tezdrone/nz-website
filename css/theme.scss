@@ -43,8 +43,45 @@ h6 {
 	text-align: right;
 }
 
+.text-justify {
+	text-align: justify;
+}
+
 .text-white {
 	color: #fff;
+}
+
+//Skeleton Loader
+.bg-skeleton {
+	height: 1em;
+	position: relative;
+	overflow: hidden;
+	background-color: #dddbdd;
+
+	&::after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		transform: translateX(-100%);
+		background-image: linear-gradient(90deg, rgba(#fff, 0) 0, rgba(#fff, 0.2) 20%, rgba(#fff, 0.3) 60%, rgba(#fff, 0));
+		animation: shimmer 2s infinite;
+		content: '';
+	}
+
+	@keyframes shimmer {
+		100% {
+			transform: translateX(100%);
+		}
+	}
+}
+
+//Ratios
+.ratio-square {
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
 }
 
 //Navigation
@@ -227,8 +264,10 @@ a.clicky-card {
 	padding: 0.75rem 1.75rem;
 	border-radius: 5rem;
 	border: none;
+	background-color: #efefef;
 
 	&:hover {
+		background-color: darken(#efefef, 5%);
 		text-decoration: none;
 		cursor: pointer;
 	}
@@ -295,6 +334,11 @@ a.clicky-card {
 	width: 25%;
 }
 
+//Height
+.h-100 {
+	height: 100%;
+}
+
 @include md {
 	.w-md-100 {
 		width: 100%;
@@ -314,6 +358,7 @@ a.clicky-card {
 }
 
 //Margins
+//X Axis
 .mt-0,
 .my-0 {
 	margin-top: 0;
@@ -353,6 +398,10 @@ a.clicky-card {
 
 .mb-5 {
 	margin-bottom: 3rem;
+}
+//Y Axis
+.mr-2 {
+	margin-right: 0.5rem;
 }
 
 //Padding
