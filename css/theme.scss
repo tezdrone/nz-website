@@ -5,7 +5,7 @@ $primary: rgb(255, 114, 20);
 $secondary: rgb(0, 225, 255);
 $dark: rgb(31, 31, 31);
 
-/*Determine Best contrast text*/
+//Determine Best contrast text
 @function contrast-text($color) {
 	@if (lightness($color) > 60) {
 		@return black;
