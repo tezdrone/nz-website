@@ -1,3 +1,4 @@
+//--Textarea Counter--
 var textarea = {
 	input: document.getElementById('msg'),
 	counter: document.getElementById('msgCounter'),
@@ -15,16 +16,17 @@ function updateCounter() {
 	textarea.counter.classList.remove('too-big');
 }
 
+//Initialize the counter
 updateCounter();
 
 textarea.input.addEventListener('input', () => {
 	updateCounter();
 });
 
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-	e.preventDefault();
+// document.getElementById('contactForm').addEventListener('submit', (e) => {
+// 	e.preventDefault();
 
-	if (textarea.input.value.length > textarea.maxLength) {
-		alert('Your message is too long');
-	}
-});
+// 	if (textarea.input.value.length > textarea.maxLength) {
+// 		alert('Your message is too long');
+// 	}
+// });
