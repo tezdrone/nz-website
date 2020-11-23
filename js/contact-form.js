@@ -12,8 +12,6 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
 	let form = e.target,
 		errArr = [];
 
-	console.log(form);
-
 	//First Name
 	let fName = form.fName;
 	if (fName.value.length < 3) {
@@ -67,11 +65,6 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
 		});
 	}
 
-	// console.clear();
-	errArr.forEach((err) => {
-		console.log(err.err);
-	});
-
 	//Clear the invalid class from all fields before checking for errors
 	function clearErrStack() {
 		//Concatenate HTML element arrays
@@ -82,7 +75,6 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
 
 		const fieldArr = inputArr.concat(textAreaArr, selectArr);
 
-		console.log(fieldArr);
 		for (let i = 0; i < fieldArr.length; i++) {
 			const el = fieldArr[i];
 			el.classList.remove('invalid');
@@ -108,10 +100,9 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
 
 		const errBox = document.getElementById('errors');
 		errBox.innerHTML = errMsg;
-		errBox.classList.add('show');
-
-		console.log(errMsg);
+		return errBox.classList.add('show');
 	}
+	form.submit();
 });
 
 //--Textarea Counter--
