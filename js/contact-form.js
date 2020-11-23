@@ -67,15 +67,6 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
 		});
 	}
 
-	//Contact Method
-	let contactMethod = form.contactMethod;
-	if (contactMethod.value == '') {
-		errArr.push({
-			field: contactMethod,
-			err: 'Please select your preferred contact method',
-		});
-	}
-
 	// console.clear();
 	errArr.forEach((err) => {
 		console.log(err.err);
