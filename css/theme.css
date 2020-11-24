@@ -75,6 +75,18 @@ h6 {
   position: relative;
 }
 
+.ratio-square :first-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hide-overflow {
+  overflow: hidden;
+}
+
 nav.navbar {
   width: 100%;
   position: fixed;
