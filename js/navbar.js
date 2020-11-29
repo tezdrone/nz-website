@@ -17,3 +17,7 @@ updateNav();
 window.addEventListener('scroll', () => {
 	updateNav();
 });
+
+document.getElementById('navbarToggle').addEventListener('click', () => {
+	navbar.classList.toggle('active');
+});

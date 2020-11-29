@@ -107,22 +107,24 @@ nav.navbar {
 	justify-content: space-between;
 	padding: 0.5rem 1rem;
 	z-index: 1;
-	color: #fff;
+	background: #fff;
+	color: #000;
 
-	background: linear-gradient(225deg, #00000024, transparent);
+	&.is-scrolled {
+		box-shadow: 0 0 5px 0px #00000080;
+	}
 
-	transition-duration: 300ms;
+	@include md {
+		transition-duration: 300ms;
+		&:not(.is-scrolled) {
+			&.navbar-transparent {
+				background: linear-gradient(225deg, #00000024, transparent);
+				color: #fff;
 
-	&.is-scrolled,
-	&:not(.navbar-transparent) {
-		background: #fff;
-		color: #000;
-
-		.navbar-nav li a:hover::after {
-			background: #000000;
-		}
-		&.is-scrolled {
-			box-shadow: 0 0 5px 0px #00000080;
+				.navbar-nav li a:hover::after {
+					background: #ffffff;
+				}
+			}
 		}
 	}
 
@@ -139,13 +141,31 @@ nav.navbar {
 		}
 	}
 
-	.navbar-nav {
+	.navbar-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		padding-right: 1rem;
 		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		div {
+			width: 33px;
+			height: 4px;
+			background-color: rgb(61, 61, 61);
+			margin: 4px 0;
+		}
+	}
+
+	.navbar-nav {
 		flex-direction: column;
 		padding-left: 0;
 		margin-bottom: 0;
 		list-style: none;
 		margin-top: 0;
+		display: none;
 
 		li:not(:last-of-type) a {
 			margin-right: 0.75rem;
@@ -172,9 +192,15 @@ nav.navbar {
 				transition-duration: 350ms;
 			}
 			&:hover::after {
-				background: #ffffff;
+				background: #000000;
 				transform: translateY(0);
 			}
+		}
+	}
+
+	&.active {
+		.navbar-nav {
+			display: flex;
 		}
 	}
 }
@@ -196,8 +222,12 @@ footer {
 @include md {
 	nav.navbar {
 		flex-direction: row;
+		.navbar-toggle {
+			display: none;
+		}
 		.navbar-nav {
 			flex-direction: row;
+			display: flex;
 		}
 	}
 }
@@ -231,11 +261,20 @@ footer {
 .card {
 	border-radius: 1rem;
 	background-color: #fff;
+	padding: 0.6rem 0.8rem;
+	&.shadowed {
+		box-shadow: 2px 2px 8px #0000003b;
+		transition-duration: 300ms;
+
+		&:hover {
+			box-shadow: 2px 2px 20px #0000003b;
+		}
+	}
 }
 a.clicky-card {
 	text-decoration: none;
 
-	.card {
+	.card-content {
 		background: #0091ff;
 		color: #fff;
 		min-height: 300px;
@@ -269,6 +308,10 @@ a.clicky-card {
 			}
 		}
 	}
+}
+
+.rounded {
+	border-radius: 0.5rem;
 }
 
 //Buttons
@@ -442,4 +485,8 @@ a.clicky-card {
 //Position
 .p-relative {
 	position: relative;
+}
+
+.location-image {
+	box-shadow: 10px 10px #dedede;
 }
