@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/grid.css" />
 		<link rel="stylesheet" href="css/theme.css" />
+		<link rel="stylesheet" href="css/pages/history.css" />
 	</head>
 	<body>
 		<nav id="mainNav" class="navbar">
@@ -28,7 +29,19 @@
 
 		<div class="container head-padding">
 			<h1 class="fancy-title text-center">History</h1>
-			yay
+			<div class="mb-4">
+				<h3 class="mb-0">The Treaty of Waitangi</h3>
+				<p class="my-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptas sapiente maiores iste sit atque ut dolor corporis repellat repellendus dolorum quas debitis doloremque, consectetur molestiae sint recusandae totam odit.</p>
+			</div>
+			<div class="card shadowed mb-4">
+				<p class="text-center">Use the interactive map to discover historical events within New Zealand</p>
+				<div class="row">
+					<div class="col-md-6 col-lg-7" id="mapInfo"><h2>Select a pin from the map</h2></div>
+					<div class="col-md-6 col-lg-5">
+						<div id="map" style="width: 100%; height: 400px"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<footer>
@@ -51,12 +64,21 @@
 						</ul>
 					</div>
 					<div class="col-sm-6 text-right">
-						Social <br />
-						<span class="fancy-title">Kiwi Prelude</span>
+						<ul>
+							<li>
+								<a href="#">Privacy Policy</a>
+							</li>
+							<li>
+								<span class="fancy-title">Kiwi Prelude</span>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</footer>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCXL7-HP91kSZf5kDriLYpgXuWg6kCKmI&callback=initMap&libraries=&v=weekly" defer></script>
+		<script src="js/interactive-map.js"></script>
 
 		<script src="js/navbar.js"></script>
 	</body>
