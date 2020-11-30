@@ -165,8 +165,18 @@ nav.navbar .navbar-toggle {
 nav.navbar .navbar-toggle div {
   width: 33px;
   height: 4px;
-  background-color: #3d3d3d;
+  background-color: #ff7214;
   margin: 4px 0;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+}
+
+nav.navbar .navbar-toggle:hover {
+  cursor: pointer;
+}
+
+nav.navbar .navbar-toggle:hover div {
+  background-color: #ffa061;
 }
 
 nav.navbar .navbar-nav {
@@ -309,7 +319,7 @@ a.clicky-card {
 }
 
 a.clicky-card .card-content {
-  background: #0091ff;
+  background: #00e1ff;
   color: #fff;
   min-height: 300px;
   overflow: hidden;

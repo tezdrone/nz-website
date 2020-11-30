@@ -3,7 +3,6 @@
 //Theme Colours
 $primary: rgb(255, 114, 20);
 $secondary: rgb(0, 225, 255);
-$dark: rgb(31, 31, 31);
 
 //Determine Best contrast text
 @function contrast-text($color) {
@@ -154,8 +153,16 @@ nav.navbar {
 		div {
 			width: 33px;
 			height: 4px;
-			background-color: rgb(61, 61, 61);
+			background-color: $primary;
 			margin: 4px 0;
+			transition-duration: 200ms;
+		}
+
+		&:hover {
+			cursor: pointer;
+			div {
+				background-color: lighten($primary, 15%);
+			}
 		}
 	}
 
@@ -275,7 +282,7 @@ a.clicky-card {
 	text-decoration: none;
 
 	.card-content {
-		background: #0091ff;
+		background: $secondary;
 		color: #fff;
 		min-height: 300px;
 		overflow: hidden;
