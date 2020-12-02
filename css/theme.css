@@ -169,6 +169,7 @@ nav.navbar .navbar-toggle div {
   margin: 4px 0;
   -webkit-transition-duration: 200ms;
           transition-duration: 200ms;
+  border-radius: 2px;
 }
 
 nav.navbar .navbar-toggle:hover {

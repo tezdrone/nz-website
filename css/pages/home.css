@@ -37,3 +37,15 @@
 .welcome .overlay .welcome-text h1 {
 	font-size: 4.5rem;
 }
+
+@media screen and (max-width: 1200px) {
+	.welcome .background {
+		margin-left: -230px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.welcome .background {
+		margin-left: -430px;
+	}
+}
