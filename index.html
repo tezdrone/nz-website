@@ -34,7 +34,7 @@
 					<div class="col-md-7 col-lg-6 welcome-text">
 						<h1 class="fancy-title my-0">Explore New Zealand</h1>
 						<h3 class="my-0 mb-3">like never before</h3>
-						<a href="#aotearoa"><button class="btn btn-primary">Learn More!</button></a>
+						<a href="#aotearoa" id="learnMore"><button class="btn btn-primary">Learn More!</button></a>
 					</div>
 				</div>
 			</div>
@@ -46,7 +46,7 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<a href="places-to-go.html" class="clicky-card"
-							><div class="card-content">
+							><div class="card-content" style="background-image: url('/img/places/skytower.jpg'); background-size: cover; background-position: center">
 								<div class="card-text">
 									<div class="card-title">Places to Go</div>
 									<div class="card-subtitle">Main attractions and places you should go</div>
@@ -56,7 +56,7 @@
 					</div>
 					<div class="col-sm-6">
 						<a href="events-to-see.html" class="clicky-card">
-							<div class="card-content">
+							<div class="card-content" style="background-image: url('/img/events/3.jpg'); background-size: cover; background-position: center">
 								<div class="card-text">
 									<div class="card-title">Events to See</div>
 									<div class="card-subtitle">Upcoming Events that you simply must see</div>
@@ -108,19 +108,16 @@
 		</footer>
 
 		<script>
-			document.querySelectorAll('a[href^="#aotearoa"]').forEach((anchor) => {
-				console.log(anchor);
-				anchor.addEventListener('click', function (e) {
-					e.preventDefault();
+			document.getElementById('learnMore').addEventListener('click', function (e) {
+				e.preventDefault();
 
-					var welcomeY = document.getElementById('welcome').offsetHeight;
-					var navY = document.getElementById('mainNav').offsetHeight;
+				var welcomeY = document.getElementById('welcome').offsetHeight;
+				var navY = document.getElementById('mainNav').offsetHeight;
 
-					window.scroll({
-						top: welcomeY - navY + 2,
-						left: 0,
-						behavior: 'smooth',
-					});
+				window.scroll({
+					top: welcomeY - navY + 2,
+					left: 0,
+					behavior: 'smooth',
 				});
 			});
 		</script>
