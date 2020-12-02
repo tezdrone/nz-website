@@ -13,20 +13,23 @@
 	<body>
 		<nav id="mainNav" class="navbar">
 			<div class="navbar-brand"><a class="fancy-title" href="/">Kiwi Prelude</a></div>
-			<div class="navbar-collapse">
-				<ul class="navbar-nav">
-					<li><a href="/">Home</a></li>
-					<li><a href="places-to-go.html">Places to Go</a></li>
-					<li><a href="events-to-see.html">Events to See</a></li>
-					<li><a href="history.html">NZ History</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul>
+			<div class="navbar-toggle" id="navbarToggle">
+				<div></div>
+				<div></div>
+				<div></div>
 			</div>
+			<ul class="navbar-nav">
+				<li><a href="/">Home</a></li>
+				<li><a href="places-to-go.html">Places to Go</a></li>
+				<li><a href="events-to-see.html">Events to See</a></li>
+				<li><a href="history.html">NZ History</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
 		</nav>
 
 		<div class="container text-center head-padding mb-5">
 			<h1 class="fancy-title">Contact Us</h1>
-			<p>Got some questions? No worries, we've got your back. Just fill out this handy-dandy contact form and our team will get back to you within 24 hours.</p>
+			<p>Got some questions? No worries, we've got your back. Just fill out this contact form and our team will get back to you within 24 hours.</p>
 
 			<div id="errors" class="w-100 w-md-50 d-inline-block text-left"></div>
 			<form class="w-100 w-md-50 d-inline-block" id="contactForm" method="POST" action="/contact">
@@ -86,8 +89,14 @@
 						</ul>
 					</div>
 					<div class="col-sm-6 text-right">
-						Social <br />
-						<span class="fancy-title">Kiwi Prelude</span>
+						<ul>
+							<li>
+								<a href="privacy-policy.html">Privacy Policy</a>
+							</li>
+							<li>
+								<span class="fancy-title">Kiwi Prelude</span>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>

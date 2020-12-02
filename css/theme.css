@@ -107,24 +107,27 @@ nav.navbar {
           justify-content: space-between;
   padding: 0.5rem 1rem;
   z-index: 1;
-  color: #fff;
-  background: linear-gradient(225deg, #00000024, transparent);
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-}
-
-nav.navbar.is-scrolled, nav.navbar:not(.navbar-transparent) {
   background: #fff;
   color: #000;
 }
 
-nav.navbar.is-scrolled .navbar-nav li a:hover::after, nav.navbar:not(.navbar-transparent) .navbar-nav li a:hover::after {
-  background: #000000;
-}
-
-nav.navbar.is-scrolled.is-scrolled, nav.navbar:not(.navbar-transparent).is-scrolled {
+nav.navbar.is-scrolled {
   -webkit-box-shadow: 0 0 5px 0px #00000080;
           box-shadow: 0 0 5px 0px #00000080;
+}
+
+@media (min-width: 768px) {
+  nav.navbar {
+    -webkit-transition-duration: 300ms;
+            transition-duration: 300ms;
+  }
+  nav.navbar:not(.is-scrolled).navbar-transparent {
+    background: linear-gradient(225deg, #00000024, transparent);
+    color: #fff;
+  }
+  nav.navbar:not(.is-scrolled).navbar-transparent .navbar-nav li a:hover::after {
+    background: #ffffff;
+  }
 }
 
 nav.navbar .navbar-brand {
@@ -141,10 +144,42 @@ nav.navbar .navbar-brand a {
   text-decoration: none;
 }
 
-nav.navbar .navbar-nav {
+nav.navbar .navbar-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav.navbar .navbar-toggle div {
+  width: 33px;
+  height: 4px;
+  background-color: #ff7214;
+  margin: 4px 0;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+}
+
+nav.navbar .navbar-toggle:hover {
+  cursor: pointer;
+}
+
+nav.navbar .navbar-toggle:hover div {
+  background-color: #ffa061;
+}
+
+nav.navbar .navbar-nav {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -153,6 +188,7 @@ nav.navbar .navbar-nav {
   margin-bottom: 0;
   list-style: none;
   margin-top: 0;
+  display: none;
 }
 
 nav.navbar .navbar-nav li:not(:last-of-type) a {
@@ -184,9 +220,15 @@ nav.navbar .navbar-nav a:after {
 }
 
 nav.navbar .navbar-nav a:hover::after {
-  background: #ffffff;
+  background: #000000;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+nav.navbar.active .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 footer {
@@ -208,11 +250,17 @@ footer ul li:not(:last-of-type) {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  nav.navbar .navbar-toggle {
+    display: none;
+  }
   nav.navbar .navbar-nav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -251,14 +299,27 @@ footer ul li:not(:last-of-type) {
 .card {
   border-radius: 1rem;
   background-color: #fff;
+  padding: 0.6rem 0.8rem;
+}
+
+.card.shadowed {
+  -webkit-box-shadow: 2px 2px 8px #0000003b;
+          box-shadow: 2px 2px 8px #0000003b;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.card.shadowed:hover {
+  -webkit-box-shadow: 2px 2px 20px #0000003b;
+          box-shadow: 2px 2px 20px #0000003b;
 }
 
 a.clicky-card {
   text-decoration: none;
 }
 
-a.clicky-card .card {
-  background: #0091ff;
+a.clicky-card .card-content {
+  background: #00e1ff;
   color: #fff;
   min-height: 300px;
   overflow: hidden;
@@ -279,7 +340,7 @@ a.clicky-card .card {
           justify-content: flex-end;
 }
 
-a.clicky-card .card:hover {
+a.clicky-card .card-content:hover {
   -webkit-box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.3);
   border-radius: 0.5rem;
@@ -287,13 +348,13 @@ a.clicky-card .card:hover {
           transform: scale(1.02);
 }
 
-a.clicky-card .card:hover .card-text {
+a.clicky-card .card-content:hover .card-text {
   -webkit-box-flex: 0.2;
       -ms-flex: 0.2;
           flex: 0.2;
 }
 
-a.clicky-card .card .card-text {
+a.clicky-card .card-content .card-text {
   background: rgba(0, 0, 0, 0.3);
   padding: 0.6rem 0.8rem;
   text-align: left;
@@ -304,8 +365,12 @@ a.clicky-card .card .card-text {
           transition-duration: 300ms;
 }
 
-a.clicky-card .card .card-text .card-title {
+a.clicky-card .card-content .card-text .card-title {
   font-size: 2rem;
+}
+
+.rounded {
+  border-radius: 0.5rem;
 }
 
 .btn {
@@ -473,5 +538,10 @@ a.clicky-card .card .card-text .card-title {
 
 .p-relative {
   position: relative;
+}
+
+.location-image {
+  -webkit-box-shadow: 10px 10px #dedede;
+          box-shadow: 10px 10px #dedede;
 }
 /*# sourceMappingURL=theme.css.map */
