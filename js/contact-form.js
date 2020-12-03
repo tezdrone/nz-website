@@ -6,6 +6,7 @@ let textarea = {
 textarea.maxLength = textarea.input.dataset.maxLength;
 
 //Listen for the form submit and prevent default event
+//Reference W3 Schools. (n.d.). PreventDefault() event method. W3Schools Online Web Tutorials. https://www.w3schools.com/jsref/event_preventdefault.asp
 document.getElementById('contactForm').addEventListener('submit', (e) => {
 	e.preventDefault();
 

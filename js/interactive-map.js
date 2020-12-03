@@ -4,6 +4,8 @@ const placeArr = [
 	{ title: 'Littleton Rail Tunnel', date: '1867', position: { lat: -43.588, lng: 172.707 }, info: 'Travelling between Lyttelton and the swampy lands of Christchurch once involved a difficult climb over mountains. This negatively impacted merchants living in the area. Eventually it was decided that a tunnel was to be made between the two locations.' },
 ];
 
+//Reference for map https://developers.google.com/maps/documentation/javascript/overview
+
 let map;
 
 function initMap() {
