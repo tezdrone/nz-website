@@ -50,6 +50,12 @@ h6 {
 	color: #fff;
 }
 
+@include sm {
+	.text-right-sm {
+		text-align: right;
+	}
+}
+
 //Skeleton Loader
 .bg-skeleton {
 	height: 1em;

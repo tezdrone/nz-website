@@ -33,6 +33,12 @@ h6 {
   color: #fff;
 }
 
+@media (min-width: 576px) {
+  .text-right-sm {
+    text-align: right;
+  }
+}
+
 .bg-skeleton {
   height: 1em;
   position: relative;
