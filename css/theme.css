@@ -519,6 +519,10 @@ a.clicky-card .card-content .card-text .card-title {
   margin-right: 0.5rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .head-padding {
   padding-top: 5rem;
 }
