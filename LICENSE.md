@@ -1,2 +1,1 @@
-
-Copyright (C) 2020 Aurorah Harmony
+Copyright (C) 2020 Ben Mitchell
